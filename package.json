@@ -1,6 +1,6 @@
 {
   "name": "next-rich-transitions",
-  "version": "0.0.2-rc.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "Let you easily run complex View Transitions API animations within Next.js Pages Router",
   "main": "./dist/index.js",
