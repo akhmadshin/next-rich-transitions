@@ -9,9 +9,8 @@ export const getHandleRouteChangeComplete = (singletonRouter: SingletonRouter) =
   if (!window.__NTH_pageMounted) {
     return;
   }
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  let newRouterKey = singletonRouter.router!._key;
+
+  let newRouterKey = (singletonRouter.router as never as { _key: string })._key;
 
   if (window.__NTH_routerKeyByHashRouteKey && window.__NTH_routerKey) {
     newRouterKey = window.__NTH_routerKeyByHashRouteKey[newRouterKey] ?? newRouterKey;
